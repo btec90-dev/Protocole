@@ -1,0 +1,6 @@
+{
+  "name": "Portail Protocole FIV - Fatou",
+  "description": "Suivi personnalisé du protocole PMA / FIV, calendrier des 4 phases, plan de décongélation, résultats PGT-A et étapes obstétricales.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

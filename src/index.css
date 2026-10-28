@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --theme-light-brown-bg: #F8F4EE;
+  --theme-light-brown-surface: #FFFFFF;
+  --theme-light-brown-muted: #F2E9DE;
+  --theme-light-brown-primary: #B59067;
+  --theme-light-brown-accent: #C7A47D;
+  --theme-light-brown-card: #EFE4D6;
+  --theme-light-brown-dark: #4A3320;
+  --theme-light-brown-border: #DBCBB7;
+  --theme-gold: #D4AF37;
+  --theme-gold-light: #F4EEDC;
+}
+
+/* Fluid Responsive Typography with Clamp to prevent overflow on mobile */
+h1, .text-h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.4rem, 3.8vw, 2.35rem);
+  line-height: 1.22;
+  word-break: break-word;
+}
+
+h2, .text-h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.15rem, 2.8vw, 1.75rem);
+  line-height: 1.25;
+  word-break: break-word;
+}
+
+h3, .text-h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(0.95rem, 2.2vw, 1.35rem);
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-serif-italic {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+}
+
+.font-eyebrow, .uppercase-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.font-sans {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Authentic Light Brown Palettes */
+.bg-light-brown-banner {
+  background: linear-gradient(135deg, #BA956D 0%, #C9A983 50%, #D8BE9D 100%);
+}
+
+.bg-light-brown-header {
+  background-color: #EFE5D8;
+}
+
+.bg-light-brown-soft {
+  background-color: #F8F4EE;
+}
+
+.bg-light-brown-card {
+  background-color: #FFFFFF;
+}
+
+.text-light-brown-title {
+  color: #4A3320;
+}
+
+.text-light-brown-brand {
+  color: #9E774E;
+}
+
+.border-light-brown {
+  border-color: #DBCBB7;
+}
+
+.border-light-brown-accent {
+  border-color: #C5A27A;
+}
+
+/* Two-line minimalist luxury hamburger */
+.menu-two-lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 22px;
+  height: 22px;
+}
+
+.menu-two-lines span {
+  display: block;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 9999px;
+  transition: all 0.25s ease-in-out;
+}
+
+.menu-two-lines .line-1 {
+  width: 20px;
+}
+
+.menu-two-lines .line-2 {
+  width: 14px;
+}
+
+.menu-two-lines.is-active .line-1 {
+  transform: translateY(3.5px) rotate(45deg);
+  width: 18px;
+}
+
+.menu-two-lines.is-active .line-2 {
+  transform: translateY(-3.5px) rotate(-45deg);
+  width: 18px;
+}
+
+/* Calendar responsive scaling clamp */
+.calendar-cell-title {
+  font-size: clamp(0.55rem, 1.4vw, 0.72rem);
+  line-height: 1.15;
+}
+
+.calendar-day-num {
+  font-size: clamp(0.68rem, 1.8vw, 0.85rem);
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
+
+.animate-shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4.5rem;
+    overflow-x: clip;
+  }
+  body {
+    overflow-x: clip;
+    background-color: #F8F4EE;
+    color: #4A3320;
+  }
+}
+
+@media print {
+  header, footer, button, .no-print {
+    display: none !important;
+  }
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  section {
+    break-inside: avoid;
+    border-color: #ddd !important;
+  }
+}
