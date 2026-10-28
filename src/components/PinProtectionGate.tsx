@@ -90,7 +90,7 @@ export const PinProtectionGate: React.FC<PinProtectionGateProps> = ({
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#F8F4EE] via-[#EFE5D8] to-[#E5D5C2] flex flex-col items-center justify-center p-4 selection:bg-[#BA936A] selection:text-white">
+    <div className="min-h-screen bg-gradient-to-b from-[#F8F4EE] via-[#EFE5D8] to-[#E5D5C2] flex flex-col items-center justify-start pt-6 sm:pt-10 p-4 selection:bg-[#BA936A] selection:text-white">
       <div className="w-full max-w-sm mx-auto flex flex-col items-center animate-in fade-in zoom-in-95 duration-300">
         
         {/* Top Portrait Medallion */}
