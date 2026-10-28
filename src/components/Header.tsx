@@ -45,6 +45,7 @@ export const Header: React.FC<HeaderProps> = ({
 
   const navLinks = [
     { id: 'countdown', label: 'Compte à rebours', icon: <Clock className="w-4 h-4" /> },
+    { id: 'phases', label: 'Chronologie', icon: <Calendar className="w-4 h-4" /> },
     { id: 'checklist', label: 'Checklist', icon: <ShieldAlert className="w-4 h-4" /> },
     { id: 'calendrier', label: 'Calendrier', icon: <Calendar className="w-4 h-4" /> },
     { id: 'photos', label: 'Clichés & Documents', icon: <Camera className="w-4 h-4" /> },
